@@ -12,7 +12,7 @@ public class GamePanel extends JPanel implements ActionListener {
     static final int LARGURA_TELA = 1300;
     static final int ALTURA_TELA = 750;
     static final int TAMANHO_BLOCO = 50;
-    static final int UNIDADE_JOGO = (LARGURA_TELA * ALTURA_TELA) / TAMANHO_BLOCO;
+    static final int UNIDADE_JOGO = (LARGURA_TELA * ALTURA_TELA) / (TAMANHO_BLOCO * TAMANHO_BLOCO);
     static final int INTERVALO = 200; // milissegundos, velocidade da cobra
     private static final String NOME_FONTE = "Ink Free";
     private final int eixoX[] = new int[UNIDADE_JOGO];
@@ -134,7 +134,8 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(Color.red);
         g.setFont(new Font(NOME_FONTE, Font.BOLD, 75));
         FontMetrics fonteFinal = getFontMetrics(g.getFont());
-        g.drawString("\uD83D\uDE1D Fim de Jogo.", (LARGURA_TELA - fonteFinal.stringWidth("Fim do Jogo")) / 2,
+        String textoFimDeJogo = "\uD83D\uDE1D Fim de Jogo.";
+        g.drawString(textoFimDeJogo, (LARGURA_TELA - fonteFinal.stringWidth(textoFimDeJogo)) / 2,
                 ALTURA_TELA / 2);
     }
 
@@ -159,12 +160,12 @@ public class GamePanel extends JPanel implements ActionListener {
         }
 
         // A cabeça tocou em alguma borda direita ou esquerda?
-        if (eixoX[0] < 0 || eixoX[0] > LARGURA_TELA) {
+        if (eixoX[0] < 0 || eixoX[0] >= LARGURA_TELA) {
             estaRodando = false;
         }
 
         // A cabeça tocou no piso ou no teto?
-        if (eixoY[0] < 0 || eixoY[0] > ALTURA_TELA) {
+        if (eixoY[0] < 0 || eixoY[0] >= ALTURA_TELA) {
             estaRodando = false;
         }
 
