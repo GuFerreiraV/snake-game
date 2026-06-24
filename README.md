@@ -2,18 +2,18 @@
 
 Um jogo clássico da cobrinha (Snake Game) desenvolvido em Java utilizando a biblioteca Swing para a interface gráfica.
 
-## 📝 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto é uma implementação simples e funcional do famoso "Snake Game". O objetivo do jogador é controlar a cobra, comer as maçãs que aparecem aleatoriamente na tela para crescer e acumular pontos, evitando colidir com as bordas da tela ou com o próprio corpo.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Jogabilidade Clássica:** Controle a cobra e cresça ao comer maçãs.
 - **Sistema de Pontuação:** Acompanhe sua pontuação em tempo real no topo da tela.
 - **Dificuldade Progressiva:** A cada maçã comida, o desafio aumenta (corpo maior).
 - **Interface Gráfica:** Desenvolvido com Java Swing.
 
-## 🎮 Controles
+## Controles
 
 Use as setas do teclado para controlar a direção da cobra:
 
@@ -22,12 +22,12 @@ Use as setas do teclado para controlar a direção da cobra:
 - `←` (Seta para Esquerda): Mover para a esquerda.
 - `→` (Seta para Direita): Mover para a direita.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Linguagem:** Java
 - **Interface Gráfica:** Java Swing / AWT
 
-## ⚙️ Como Executar
+## Como Executar
 
 Para rodar o jogo em sua máquina local, siga os passos abaixo:
 
